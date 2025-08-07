@@ -1,18 +1,39 @@
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  font-family: sans-serif;
+:root {
+  /* Typography */
+  --font-size-l: 16px;
+  --font-size-s: 16px;
+  --font-color: #b4b4b4;
+
+  /* Spacing */
+  --padding-base: 24px;
+  --button-padding-rectangle: 6px 10px;
+  --button-padding-square: 8px;
+
+  /* Labels */
+  --primary-color: #f5f5f5;
+  --secondary-color: #a1a1a1;
+
+  /* Placeholder */
+  --placeholder-color: #737373;
+  --placeholder-color-focus: #1e1e1e;
+
+  /* Buttons and Alerts */
+  --red-color: #c65254; /* For delete or error actions */
+  --green-color: #4caf50; /* Success messages, active states */
+  --yellow-color: #ffcc00; /* Warnings, attention */
+  --blue-color: #2196f3; /* Info, links, secondary actions */
+
+  /* Backgrounds */
+  --editor-panel-bg: #171717;
+  --overview-bg: #282828;
+  --overall-bg: #0a0a0a;
+  --placeholder-bg: #262626;
+
+  /* Borders */
+  --border-color-light: #333333;
+  --border-color-dark: #1a1a1a;
+
+  /* Highlights */
+  --highlight-color: #0f3aa4; 
 }
 
-.app-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.cv-builder-layout {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
