@@ -9,7 +9,7 @@ import './styles/styles.css';
 function App() {
   return (
     <div className="app-container">
-      <h1 className="app-header">Ascora</h1>
+      <h1 className="app-header bold">Ascora</h1>
       <div className="cv-builder-layout">
         <EditorPanel />
         <PreviewPanel />

@@ -34,13 +34,14 @@
   --border-color-dark: #1a1a1a;
 
   /* Highlights */
-  --highlight-color: #0f3aa4; 
+  --highlight-color: #0f3aa4;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
-  font-family: sans-serif;
 }
 .app-container {
   height: 100%;
@@ -52,6 +53,21 @@ html, body, #root {
   flex: 1;
   flex-wrap: wrap;
   overflow: hidden;
+}
+
+body {
+  font-family: "OpenRunde", system-ui, sans-serif;
+  padding: 0 16px;
+  background-color: #0a0a0a;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.app-header {
+  color: white;
+  padding: 10px 0;
 }
 
 .editor-panel {
@@ -77,4 +93,3 @@ html, body, #root {
   font-size: var(--font-size-l);
   font-weight: 900;
 }
-
