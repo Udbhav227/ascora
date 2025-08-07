@@ -25,7 +25,7 @@
 
   /* Backgrounds */
   --editor-panel-bg: #171717;
-  --overview-bg: #282828;
+  --preview-bg: #282828;
   --overall-bg: #0a0a0a;
   --placeholder-bg: #262626;
 
@@ -35,5 +35,46 @@
 
   /* Highlights */
   --highlight-color: #0f3aa4; 
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+.app-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cv-builder-layout {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.editor-panel {
+  flex: 1 1 40%;
+  min-width: 250px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+.preview-panel {
+  background-color: var(--preview-bg);
+  padding: 0 72px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 60%;
+  min-width: 300px;
+  overflow: auto;
+}
+
+.app-header {
+  font-size: var(--font-size-l);
+  font-weight: 900;
 }
 

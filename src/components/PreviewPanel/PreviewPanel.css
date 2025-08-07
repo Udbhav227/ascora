@@ -1,15 +1,3 @@
-.preview-panel {
-  display: flex;
-  flex: 1 1 60%;
-  min-width: 300px;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #e0e0e0;
-  padding: 20px;
-  overflow: auto;
-  flex-direction: column;
-}
-
 .resume-preview {
   width: 100%;
   max-width: 794px; /* A4 width in px at 96dpi */
@@ -20,4 +8,3 @@
   box-sizing: border-box;
   transform-origin: top left;
 }
-
