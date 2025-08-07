@@ -4,6 +4,7 @@ import App from './App';
 
 import './styles/fonts.css';
 import './styles/reset.css';
+import './styles/global.css'
 import './styles/styles.css'; 
 
 

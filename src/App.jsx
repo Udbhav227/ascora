@@ -3,13 +3,10 @@ import React, { useState } from 'react';
 import EditorPanel from './components/EditorPanel/EditorPanel';
 import PreviewPanel from './components/PreviewPanel/PreviewPanel';
 
-import './styles/reset.css';
-import './styles/styles.css';
-
 function App() {
   return (
     <div className="app-container">
-      <h1 className="app-header bold">Ascora</h1>
+      <a className="app-header bold">Ascora</a>
       <div className="cv-builder-layout">
         <EditorPanel />
         <PreviewPanel />

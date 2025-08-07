@@ -1,48 +1,15 @@
-:root {
-  /* Typography */
-  --font-size-l: 16px;
-  --font-size-s: 16px;
-  --font-color: #b4b4b4;
-
-  /* Spacing */
-  --padding-base: 24px;
-  --button-padding-rectangle: 6px 10px;
-  --button-padding-square: 8px;
-
-  /* Labels */
-  --primary-color: #f5f5f5;
-  --secondary-color: #a1a1a1;
-
-  /* Placeholder */
-  --placeholder-color: #737373;
-  --placeholder-color-focus: #1e1e1e;
-
-  /* Buttons and Alerts */
-  --red-color: #c65254; /* For delete or error actions */
-  --green-color: #4caf50; /* Success messages, active states */
-  --yellow-color: #ffcc00; /* Warnings, attention */
-  --blue-color: #2196f3; /* Info, links, secondary actions */
-
-  /* Backgrounds */
-  --editor-panel-bg: #171717;
-  --preview-bg: #282828;
-  --overall-bg: #0a0a0a;
-  --placeholder-bg: #262626;
-
-  /* Borders */
-  --border-color-light: #333333;
-  --border-color-dark: #1a1a1a;
-
-  /* Highlights */
-  --highlight-color: #0f3aa4;
-}
-
 html,
 body,
 #root {
   height: 100%;
   margin: 0;
 }
+body {
+  font-family: "OpenRunde", system-ui, sans-serif;
+  padding: 0 8px 8px 8px;
+  background-color: #0a0a0a;
+}
+
 .app-container {
   height: 100%;
   display: flex;
@@ -52,13 +19,13 @@ body,
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  overflow: hidden;
-}
 
-body {
-  font-family: "OpenRunde", system-ui, sans-serif;
-  padding: 0 16px;
-  background-color: #0a0a0a;
+  overflow: hidden;
+  border-radius: 1rem; /* rounded-2xl */
+  background-color: #171717; /* dark:bg-neutral-900 */
+  box-shadow: 
+    0 1px 2px 0 rgba(0, 0, 0, 0.05), /* shadow-xs */
+    0 0 0 1px rgba(255, 255, 255, 0.1); /* ring-1 ring-white/10 */
 }
 
 .bold {
@@ -67,26 +34,27 @@ body {
 
 .app-header {
   color: white;
-  padding: 10px 0;
+  padding: 16px 8px;
 }
 
 .editor-panel {
   flex: 1 1 40%;
   min-width: 250px;
   max-width: 600px;
-  background-color: #f9f9f9;
-  border-right: 1px solid #ccc;
   overflow-y: auto;
+  border-right: 1px solid var(--border-color);
+
+  color: var(--primary-color);
+  background-color: var(--editor-bg);
 }
 .preview-panel {
   background-color: var(--preview-bg);
-  padding: 0 72px;
+  padding: 24px 72px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex: 1 1 60%;
   min-width: 300px;
-  overflow: auto;
 }
 
 .app-header {

@@ -1,0 +1,38 @@
+:root {
+  /* Typography */
+  --font-size-l: 16px;
+  --font-size-s: 16px;
+  --font-color: #b4b4b4;
+
+  /* Spacing */
+  --padding-base: 24px;
+  --button-padding-rectangle: 6px 10px;
+  --button-padding-square: 8px;
+
+  /* Labels */
+  --primary-color: #f5f5f5;
+  --secondary-color: #a1a1a1;
+
+  /* Placeholder */
+  --placeholder-color-bg: #1e1e1e;
+  --placeholder-color-bg-hover: #262626;
+
+  /* Buttons and Alerts */
+  --red-color: #c65254; /* For delete or error actions */
+  --green-color: #4caf50; /* Success messages, active states */
+  --yellow-color: #ffcc00; /* Warnings, attention */
+  --blue-color: #2196f3; /* Info, links, secondary actions */
+
+  /* Backgrounds */
+  --editor-bg: #171717;
+  --preview-bg: #282828;
+  --overall-bg: #0a0a0a;
+  --placeholder-bg: #262626;
+
+  /* Borders */
+  --border-color-light: #2f2e2e;
+  --border-color-dark: #1a1a1a;
+
+  /* Highlights */
+  --highlight-color: #0f3aa4;
+}
