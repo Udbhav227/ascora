@@ -1,0 +1,23 @@
+.preview-panel {
+  display: flex;
+  flex: 1 1 60%;
+  min-width: 300px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #e0e0e0;
+  padding: 20px;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.resume-preview {
+  width: 100%;
+  max-width: 794px; /* A4 width in px at 96dpi */
+  aspect-ratio: 210 / 297;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  box-sizing: border-box;
+  transform-origin: top left;
+}
+

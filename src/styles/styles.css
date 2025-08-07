@@ -1,0 +1,18 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.app-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-builder-layout {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
