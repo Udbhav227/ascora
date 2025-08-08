@@ -1,10 +1,13 @@
 import React from 'react';
 
-import './EditorPanel.css';
+import '../../styles/EditorPanel.css';
+import PersonalDetailsForm from './PersonalDetailsForm';
 
 const EditorPanel = () => {
   return (
-    <div className="editor-panel"></div>
+    <div className="editor-panel">
+      <PersonalDetailsForm></PersonalDetailsForm>
+    </div>
   );
 };
 

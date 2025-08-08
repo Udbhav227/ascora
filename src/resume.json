@@ -6,6 +6,15 @@
     "linkedin": "linkedin.com/in/jake",
     "github": "github.com/jake"
   },
+
+
+
+
+
+
+
+
+
   "education": [
     {
       "institution": "Southwestern University",
@@ -20,6 +29,18 @@
       "duration": "Aug. 2014 – May 2018"
     }
   ],
+
+
+
+
+
+
+
+
+
+
+
+
   "experience": [
     {
       "title": "Undergraduate Research Assistant",
@@ -58,6 +79,11 @@
       ]
     }
   ],
+
+
+
+
+  
   "projects": [
     {
       "name": "Gitlytics",

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import './PreviewPanel.css';
+import '../../styles/PreviewPanel.css';
+
 
 const PreviewPanel = () => {
   return (
