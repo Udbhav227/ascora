@@ -8,3 +8,111 @@
   box-sizing: border-box;
   transform-origin: top left;
 }
+
+a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+.header h1 {
+  font-size: 1.8em;
+  margin: 0;
+  font-weight: 500;
+}
+
+.contact-info {
+  font-size: 0.8em;
+  margin-top: 5pt;
+}
+
+.contact-info a {
+  text-decoration: none;
+}
+
+.contact-info span {
+  margin: 0 5pt;
+}
+
+.section-title {
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5pt;
+  margin-top: 15pt;
+  margin-bottom: 8pt;
+}
+
+.section-content {
+  margin-left: 0;
+}
+
+.item {
+  margin-bottom: 5pt;
+}
+
+.item-header,
+.item-subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.item-header h3 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.item-header .right {
+  font-size: 0.9em;
+}
+
+.item-subheader {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: -2pt;
+  margin-bottom: 2pt;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 15pt;
+  font-size: 0.9em;
+}
+
+ul li {
+  margin-bottom: 3pt;
+}
+
+.projects .item-header {
+  font-size: 0.95em;
+}
+
+.projects .technologies {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-bottom: 2pt;
+}
+
+.skills {
+  margin-top: 10pt;
+}
+
+.skills p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.skills p strong {
+  font-weight: 600;
+}
+.skills p + p {
+  margin-top: 5pt;
+}

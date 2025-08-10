@@ -7,14 +7,6 @@
     "github": "github.com/jake"
   },
 
-
-
-
-
-
-
-
-
   "education": [
     {
       "institution": "Southwestern University",
@@ -29,17 +21,6 @@
       "duration": "Aug. 2014 – May 2018"
     }
   ],
-
-
-
-
-
-
-
-
-
-
-
 
   "experience": [
     {
@@ -80,10 +61,6 @@
     }
   ],
 
-
-
-
-  
   "projects": [
     {
       "name": "Gitlytics",

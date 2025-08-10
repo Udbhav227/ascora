@@ -1,77 +1,75 @@
-import React, { useState } from "react";
+import React from "react";
 
-const PersonalDetailsForm = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [linkedin, setLinkedin] = useState("");
-  const [github, setGithub] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log({ name, phone, email, linkedin, github });
+const PersonalDetailsForm = ({ personalDetails, setPersonalDetails }) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setPersonalDetails({
+      ...personalDetails,
+      [name]: value,
+    });
   };
 
   return (
-    <>
-      <form className="personal-details input-section" onSubmit={handleSubmit}>
-        <h1 className="section-header">Personal info</h1>
-        <div className="items-wrapper">
+    <form>
+      <h1 className="form-header">Personal info</h1>
+      <div className="inputs-container">
           <div>
-            <label>Name</label>
+            <label htmlFor="name">Full Name</label>
             <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Enter your name"
-              required="on"
+              id="name"
+              name="name"
+              value={personalDetails.name}
+              onChange={handleChange}
+              placeholder="Enter full name"
             />
           </div>
-
-          <div className="item-group">
-            <div>
-              <label>Phone</label>
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="+91 9876543210"
-                required="on"
-              />
-            </div>
-            <div>
-              <label>Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="example@email.com"
-              />
-            </div>
-          </div>
-
+        <div className="input-group">
           <div>
-            <label>LinkedIn</label>
+            <label htmlFor="phone">Phone</label>
             <input
-              type="url"
-              value={linkedin}
-              onChange={(e) => setLinkedin(e.target.value)}
-              placeholder="https://linkedin.com/in/example"
+              id="phone"
+              name="phone"
+              value={personalDetails.phone}
+              onChange={handleChange}
+              placeholder="Enter phone number"
             />
           </div>
-
           <div>
-            <label>GitHub</label>
+            <label htmlFor="email">Email</label>
             <input
-              type="url"
-              value={github}
-              onChange={(e) => setGithub(e.target.value)}
-              placeholder="https://github.com/example"
+              id="email"
+              name="email"
+              value={personalDetails.email}
+              onChange={handleChange}
+              placeholder="Enter email"
             />
           </div>
         </div>
-      </form>
-    </>
+
+        <div className="input-group">
+          <div>
+            <label htmlFor="linkedin">LinkedIn</label>
+            <input
+              id="linkedin"
+              name="linkedin"
+              value={personalDetails.linkedin}
+              onChange={handleChange}
+              placeholder="LinkedIn profile URL"
+            />
+          </div>
+          <div>
+            <label htmlFor="github">GitHub</label>
+            <input
+              id="github"
+              name="github"
+              value={personalDetails.github}
+              onChange={handleChange}
+              placeholder="GitHub profile URL"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
   );
 };
 

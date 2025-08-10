@@ -1,11 +1,16 @@
 import React from 'react';
+import PersonalDetailsPreview from './PersonalDetailsPreview';
 
 import '../../styles/PreviewPanel.css';
 
 
-const PreviewPanel = () => {
+const PreviewPanel = ( {personalDetails} ) => {
   return (
-    <div className="preview-panel"></div>
+    <div className="preview-panel">
+      <div className="resume-preview">
+        <PersonalDetailsPreview personalDetails={personalDetails}/>
+      </div>
+    </div>
   );
 };
 

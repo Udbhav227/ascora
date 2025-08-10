@@ -1,7 +1,8 @@
 :root {
   /* Typography */
-  --font-size-l: 16px;
-  --font-size-s: 16px;
+  --font-size-l: 1rem;
+  --font-size-m: 0.875rem;
+  --font-size-s: 0.75rem;
   --font-color: #b4b4b4;
 
   /* Spacing */
