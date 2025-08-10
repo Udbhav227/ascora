@@ -7,17 +7,21 @@ import PersonalDetailsForm from "./PersonalDetailsForm";
 import "../../styles/EditorPanel.css";
 
 const EditorPanel = ({ profile, setProfile }) => {
+  // This specific handler knows how to update the 'contact' part of the profile
+  const handleContactChange = (updatedContactDetails) => {
+    setProfile((prevProfile) => ({
+      ...prevProfile,
+      contact: updatedContactDetails,
+    }));
+  };  
+
   return (
     <div className="editor-panel">
       <PersonalDetailsForm
         personalDetails={profile.contact}
-        setPersonalDetails={(updatedContact) =>
-          setProfile((prev) => ({
-            ...prev,
-            contact: updatedContact,
-          }))
-        }
+        onDetailsChange={handleContactChange} // Pass the specific handler
       />
+      {/* Other forms for education, experience, etc. would go here */}
     </div>
   );
 };

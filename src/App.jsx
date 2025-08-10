@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import EditorPanel from "./components/EditorPanel/EditorPanel";
+import PreviewPanel from "./components/PreviewPanel/PreviewPanel";
 
 const App = () => {
   const [profile, setProfile] = useState({
@@ -25,14 +26,15 @@ const App = () => {
   });
 
   return (
-    <div className="app-container">
-      <a className="app-header bold">Ascora</a>
-      <div className="cv-builder-layout">
-        <div className="editor-panel">
+    <>
+      <div className="app-container">
+        <a href="#" className="app-header">Ascora</a>
+        <div className="cv-builder-layout">
           <EditorPanel profile={profile} setProfile={setProfile} />
+          <PreviewPanel profile={profile} />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

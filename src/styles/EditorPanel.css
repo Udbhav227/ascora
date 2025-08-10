@@ -59,6 +59,38 @@ input:disabled {
   opacity: 0.75;
 }
 
+.input-wrapper {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: var(--button-padding-rectangle);
+  background-color: var(--placeholder-bg);
+  border: 1px solid var(--border-color-light);
+  color: var(--primary-color);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--highlight-color);
+}
+
+input.error {
+  border-color: var(--red-color);
+}
+
+.error {
+  color: var(--red-color);
+}
+
+/* CHANGE THIS RULE */
+.input-wrapper span.error {
+  font-size: var(--font-size-s);
+  color: #d9534f;
+}
+
 @media (max-width: 600px) {
   .input-group {
     flex-direction: column;
