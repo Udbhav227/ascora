@@ -18,7 +18,7 @@ body {
 .cv-builder-layout {
   display: flex;
   flex: 1;
-  flex-wrap: wrap;
+  min-height: 0;
 
   overflow: hidden;
   border-radius: 1rem;
@@ -38,14 +38,17 @@ body {
 }
 
 .editor-panel {
-  flex: 1 1 30%;
+  flex: 1 1 35%;
   min-width: 250px;
-  max-width: 500px;
+  max-width: 550px;
   overflow-y: auto;
   border-right: 1px solid var(--border-color);
+  padding: 1.5rem;
 
   color: var(--primary-color);
   background-color: var(--editor-bg);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color-light) transparent;
 }
 .preview-panel {
   background-color: var(--preview-bg);
@@ -53,11 +56,38 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex: 1 1 70%;
+  flex: 1 1 65%;
   min-width: 300px;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color-light) transparent;
 }
 
 .app-header {
   font-size: var(--font-size-l);
   font-weight: 900;
+}
+
+.editor-panel::-webkit-scrollbar,
+.preview-panel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.editor-panel::-webkit-scrollbar-track,
+.preview-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.editor-panel::-webkit-scrollbar-thumb,
+.preview-panel::-webkit-scrollbar-thumb {
+  background-color: var(--border-color-light);
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.editor-panel::-webkit-scrollbar-thumb:hover,
+.preview-panel::-webkit-scrollbar-thumb:hover {
+  background-color: var(--highlight-color);
 }

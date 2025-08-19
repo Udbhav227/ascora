@@ -1,5 +1,5 @@
 import PersonalDetailsForm from "./PersonalDetailsForm";
-// import EducationForm from "./EducationForm";
+import EducationForm from "./EducationForm";
 // import ExperienceForm from "./ExperienceForm";
 // import ProjectsForm from "./ProjectsForm";
 // import CertificatesForm from "./CertificatesForm";
@@ -7,21 +7,27 @@ import PersonalDetailsForm from "./PersonalDetailsForm";
 import "../../styles/EditorPanel.css";
 
 const EditorPanel = ({ profile, setProfile }) => {
-  // This specific handler knows how to update the 'contact' part of the profile
-  const handleContactChange = (updatedContactDetails) => {
+  const handleSectionChange = (sectionName, updatedData) => {
     setProfile((prevProfile) => ({
       ...prevProfile,
-      contact: updatedContactDetails,
+      [sectionName]: updatedData,
     }));
-  };  
+  };
 
   return (
     <div className="editor-panel">
       <PersonalDetailsForm
-        personalDetails={profile.contact}
-        onDetailsChange={handleContactChange} // Pass the specific handler
+        personal={profile.contact}
+        onDetailsChange={(data) => handleSectionChange("contact", data)}
       />
-      {/* Other forms for education, experience, etc. would go here */}
+      <EducationForm
+        edu={profile.education}
+        onDetailsChange={(data) => handleSectionChange("education", data)}
+      />
+      {/* <ExperienceForm
+      personalDetails={profile.experience}
+      onDetailsChange={(data) => handleSectionChange("experience", data)}
+    /> */}
     </div>
   );
 };

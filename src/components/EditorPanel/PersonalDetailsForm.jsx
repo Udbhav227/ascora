@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { parsePhoneNumberFromString } from 'libphonenumber-js';
 
-const PersonalDetailsForm = ({ personalDetails, onDetailsChange }) => {
+const PersonalDetailsForm = ({ personal, onDetailsChange }) => {
   const [errors, setErrors] = useState({});
 
   const validateField = (name, value) => {
@@ -16,6 +16,8 @@ const PersonalDetailsForm = ({ personalDetails, onDetailsChange }) => {
           if (!phoneNumber || !phoneNumber.isValid()) {
             error = "Please enter a valid international phone number.";
           }
+        } else {
+          error = "Phone number is required."
         }
         break;
       case "email":
@@ -37,12 +39,10 @@ const PersonalDetailsForm = ({ personalDetails, onDetailsChange }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // Create the new, updated contact object
     const updatedDetails = {
-      ...personalDetails,
+      ...personal,
       [name]: value,
     };
-    // Pass the entire updated object up to the parent
     onDetailsChange(updatedDetails);
   };
 
@@ -51,82 +51,83 @@ const PersonalDetailsForm = ({ personalDetails, onDetailsChange }) => {
     validateField(name, value);
   };
 
-  return (
-    <form noValidate onBlur={handleBlur}>
-      <h1 className="form-header">Personal Info</h1>
-      <div className="inputs-container">
-        <div className="input-wrapper">
-          <label htmlFor="name">Full Name</label>
-          <input
-            id="name"
-            name="name"
-            className={errors.name ? "error" : ""}
-            value={personalDetails.name}
-            onChange={handleChange}
-            placeholder="Enter full name"
-          />
-          {errors.name && <span className="error">{errors.name}</span>}
+  return (<div>
+    
+      <form noValidate onBlur={handleBlur}>
+        <h2 className="form-header">Personal Info</h2>
+        <div className="inputs-container">
+          <div className="input-wrapper">
+            <label htmlFor="name">Full Name</label>
+            <input
+              id="name"
+              name="name"
+              className={errors.name ? "error" : ""}
+              value={personal.name}
+              onChange={handleChange}
+              placeholder="Enter full name"
+            />
+            {errors.name && <span className="error">{errors.name}</span>}
+          </div>
+          <div className="input-group">
+            <div className="input-wrapper">
+              <label htmlFor="phone">Phone</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                className={errors.phone ? "error" : ""}
+                value={personal.phone}
+                onChange={handleChange}
+                placeholder="e.g., +91 9876543210"
+              />
+              {errors.phone && <span className="error">{errors.phone}</span>}
+            </div>
+            <div className="input-wrapper">
+              <label htmlFor="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                className={errors.email ? "error" : ""}
+                value={personal.email}
+                onChange={handleChange}
+                placeholder="Enter email"
+              />
+              {errors.email && <span className="error">{errors.email}</span>}
+            </div>
+          </div>
+          <div className="input-group">
+            <div className="input-wrapper">
+              <label htmlFor="linkedin">LinkedIn</label>
+              <input
+                id="linkedin"
+                name="linkedin"
+                type="url"
+                className={errors.linkedin ? "error" : ""}
+                value={personal.linkedin}
+                onChange={handleChange}
+                placeholder="LinkedIn profile URL"
+              />
+              {errors.linkedin && <span className="error">{errors.linkedin}</span>}
+            </div>
+            <div className="input-wrapper">
+              <label htmlFor="github">GitHub</label>
+              <input
+                id="github"
+                name="github"
+                type="url"
+                className={errors.github ? "error" : ""}
+                value={personal.github}
+                onChange={handleChange}
+                placeholder="GitHub profile URL"
+              />
+              {errors.github && <span className="error">{errors.github}</span>}
+            </div>
+          </div>
         </div>
-
-        <div className="input-group">
-          <div className="input-wrapper">
-            <label htmlFor="phone">Phone</label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              className={errors.phone ? "error" : ""}
-              value={personalDetails.phone}
-              onChange={handleChange}
-              placeholder="e.g., +91 9876543210"
-            />
-            {errors.phone && <span className="error">{errors.phone}</span>}
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              className={errors.email ? "error" : ""}
-              value={personalDetails.email}
-              onChange={handleChange}
-              placeholder="Enter email"
-            />
-            {errors.email && <span className="error">{errors.email}</span>}
-          </div>
-        </div>
-
-        <div className="input-group">
-          <div className="input-wrapper">
-            <label htmlFor="linkedin">LinkedIn</label>
-            <input
-              id="linkedin"
-              name="linkedin"
-              type="url"
-              className={errors.linkedin ? "error" : ""}
-              value={personalDetails.linkedin}
-              onChange={handleChange}
-              placeholder="LinkedIn profile URL"
-            />
-            {errors.linkedin && <span className="error">{errors.linkedin}</span>}
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="github">GitHub</label>
-            <input
-              id="github"
-              name="github"
-              type="url"
-              className={errors.github ? "error" : ""}
-              value={personalDetails.github}
-              onChange={handleChange}
-              placeholder="GitHub profile URL"
-            />
-            {errors.github && <span className="error">{errors.github}</span>}
-          </div>
-        </div>
-      </div>
-    </form>
+      </form>
+        <hr className="section-separator" />
+  </div>
   );
 };
 
